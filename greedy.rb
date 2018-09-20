@@ -6,8 +6,9 @@ p "Change Due:"
 change = gets.to_f;
 
 def greedy change_owed
-
-	change_owed = (change_owed * 100).to_i
+	p change_owed
+	change_owed = (change_owed * 100).round()
+	p change_owed
 
 	change_owed/25 + change_owed % 25/10 + ((change_owed % 25)%10)/5 + (((change_owed % 25)%10)%5)
 end
