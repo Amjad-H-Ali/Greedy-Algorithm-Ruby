@@ -7,7 +7,7 @@ change = gets.to_f;
 
 def greedy change_owed
 
-	change_owed *= 100
+	change_owed = (change_owed * 100).to_i
 
 	change_owed/25 + change_owed % 25/10 + ((change_owed % 25)%10)/5 + (((change_owed % 25)%10)%5)
 end
